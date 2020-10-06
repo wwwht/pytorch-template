@@ -8,6 +8,7 @@ from torch.utils.data.sampler import SubsetRandomSampler
 from totch.utils.data import Dataset 
 import cv2
 import pandas as pd
+from parse_config import ConfigParser
 
 class KonDataset(Dataset):
     """Some Information about KonDataset"""
@@ -102,12 +103,6 @@ def get_DataLoader(data_dir, csv_path, batch_size, shuffle=True, validation_spli
     )
 
     return train_loader, val_loader
-
-
-
-    
-
-
 
 
 if __name__ == "__main__":
